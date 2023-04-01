@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dm0p1sinsu4kb"]
+
+[ext_resource type="Texture2D" uid="uid://5qkpfir8b3qd" path="res://art_contents/characters/Standard Assets Files/Textures/Face Simple.png" id="1_op3ue"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_op3ue")

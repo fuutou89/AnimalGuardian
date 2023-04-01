@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bormphv21iot"]
+
+[ext_resource type="Shader" path="res://shaders/PaletteFilter.gdshader" id="1_hyb62"]
+[ext_resource type="Texture2D" uid="uid://cyryvjk8uebgk" path="res://textures/apollo-1x.png" id="2_ncaj2"]
+
+[resource]
+shader = ExtResource("1_hyb62")
+shader_parameter/num_colors = 46
+shader_parameter/PALETTE_TEXTURE = ExtResource("2_ncaj2")

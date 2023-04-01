@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://brc5xbstm5j7y"]
+
+[ext_resource type="PackedScene" uid="uid://ciwc2gk8pnh2" path="res://art_contents/characters/Standard Assets Files/FBX/Female Face.FBX" id="1_jyoyg"]
+[ext_resource type="Material" uid="uid://dm0p1sinsu4kb" path="res://art_contents/characters/Standard Assets Files/Materials/Face Female 01 Black.tres" id="2_8lea8"]
+
+[node name="Female Face" instance=ExtResource("1_jyoyg")]
+
+[node name="Female Face" parent="RootNode" index="0"]
+material_override = ExtResource("2_8lea8")

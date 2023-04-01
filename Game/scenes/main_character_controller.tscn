@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://brwbqy5t2p6w1"]
+
+[ext_resource type="Script" path="res://scripts/main_character_controller.gd" id="1_mg8st"]
+[ext_resource type="Material" uid="uid://cnyc1xsw81a1h" path="res://materials/pixelart_stylizer.tres" id="2_l842p"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1oeo4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdjjl"]
+next_pass = ExtResource("2_l842p")
+diffuse_mode = 3
+specular_mode = 1
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4vmsq"]
+material = SubResource("StandardMaterial3D_wdjjl")
+
+[node name="MainCharacterController" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_mg8st")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_1oeo4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_4vmsq")
+
+[node name="SlaveSlot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.20387)
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+
+[node name="TargetCamera" type="Camera3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37.1102)
+projection = 1
+size = 10.0
+far = 53.15

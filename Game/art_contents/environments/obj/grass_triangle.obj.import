@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://fchxbyrf0h7a"
+path="res://.godot/imported/grass_triangle.obj-bc85bbcfb680cf43e4696fcbcffbcf89.mesh"
+
+[deps]
+
+files=["res://.godot/imported/grass_triangle.obj-bc85bbcfb680cf43e4696fcbcffbcf89.mesh"]
+
+source_file="res://art_contents/environments/obj/grass_triangle.obj"
+dest_files=["res://.godot/imported/grass_triangle.obj-bc85bbcfb680cf43e4696fcbcffbcf89.mesh", "res://.godot/imported/grass_triangle.obj-bc85bbcfb680cf43e4696fcbcffbcf89.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

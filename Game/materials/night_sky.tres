@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dag5x5pt7x6jm"]
+
+[ext_resource type="Shader" path="res://shaders/sky.gdshader" id="1_hhbtm"]
+
+[resource]
+shader = ExtResource("1_hhbtm")
+shader_parameter/top_color = Color(0.176471, 0.172549, 0.431373, 1)
+shader_parameter/bottom_color = Color(0.176471, 0.172549, 0.431373, 1)
+shader_parameter/sun_scatter = Color(0.176471, 0.172549, 0.431373, 1)
+shader_parameter/star_stength = 0.0
+shader_parameter/clouds_tint = Color(0.176471, 0.172549, 0.431373, 1)

@@ -1,0 +1,41 @@
+[gd_resource type="ShaderMaterial" load_steps=8 format=3 uid="uid://cujculglv13tv"]
+
+[ext_resource type="Shader" path="res://shaders/wind_grass.gdshader" id="1_myiah"]
+
+[sub_resource type="Curve" id="Curve_1v23y"]
+_data = [Vector2(0, 0), 0.0, 2.5, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_eb7l8"]
+width = 128
+curve = SubResource("Curve_1v23y")
+
+[sub_resource type="Gradient" id="Gradient_upc6l"]
+offsets = PackedFloat32Array(0.0198915, 0.64557, 0.985981)
+colors = PackedColorArray(0.56, 0.056, 0.224, 1, 0.700134, 0.3204, 0.89, 1, 0.92, 0.4232, 0.80408, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_onv7q"]
+gradient = SubResource("Gradient_upc6l")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ouxst"]
+frequency = 0.052
+fractal_octaves = 3
+fractal_lacunarity = 0.44
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_e5pnq"]
+noise = SubResource("FastNoiseLite_ouxst")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_myiah")
+shader_parameter/wind_speed = 0.1
+shader_parameter/wind_strength = 2.0
+shader_parameter/wind_texture_tile_size = 10.0
+shader_parameter/wind_vertical_strength = 0.3
+shader_parameter/wind_horizontal_direction = Vector2(1, 0.5)
+shader_parameter/character_position = Vector3(0, 0, 0)
+shader_parameter/character_radius = 0.5
+shader_parameter/character_push_strength = 0.5
+shader_parameter/color_ramp = SubResource("GradientTexture1D_onv7q")
+shader_parameter/wind_noise = SubResource("NoiseTexture2D_e5pnq")
+shader_parameter/character_distance_falloff_curve = SubResource("CurveTexture_eb7l8")

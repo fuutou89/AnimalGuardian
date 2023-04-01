@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://0j00s1mgvmv5"]
+
+[ext_resource type="Shader" path="res://shaders/terrian.gdshader" id="1_4uu7u"]
+[ext_resource type="Texture2D" uid="uid://c0k6muesqfm82" path="res://art_contents/environments/textures/Grass_corrupted/Grass_corrupted_down.png" id="2_i2uc8"]
+[ext_resource type="Texture2D" uid="uid://8fi05xh75vxw" path="res://art_contents/environments/textures/dirt_corrupted/dirt_corrupted_left.png" id="3_stofx"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_dx182"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dnbm0"]
+noise = SubResource("FastNoiseLite_dx182")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_4uu7u")
+shader_parameter/cut_factor = 0.544
+shader_parameter/border = 0.087
+shader_parameter/height = 0.0
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_dnbm0")
+shader_parameter/albedo_1 = ExtResource("2_i2uc8")
+shader_parameter/albedo_2 = ExtResource("3_stofx")

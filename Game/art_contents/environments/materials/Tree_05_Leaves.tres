@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://brvh50bgdb5t3"]
+
+[ext_resource type="Texture2D" uid="uid://bmm3yx4qllyre" path="res://art_contents/environments/textures/Tree 05 Leaves.png" id="1_5eauj"]
+[ext_resource type="Material" uid="uid://bw2cdxbun2pkv" path="res://materials/env_pixelart_stylizer.tres" id="2_ygwny"]
+
+[resource]
+next_pass = ExtResource("2_ygwny")
+transparency = 2
+alpha_scissor_threshold = 0.9
+alpha_antialiasing_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_5eauj")
+metallic = 0.04

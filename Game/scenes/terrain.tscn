@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://gobk4d6lg5nm"]
+
+[ext_resource type="Shader" path="res://shaders/stochastic.gdshader" id="1_6hbyp"]
+[ext_resource type="Texture2D" uid="uid://c0ym36t4a224j" path="res://addons/Cliff_3_BaseColor_lut.png" id="2_k53hj"]
+[ext_resource type="Texture2D" uid="uid://ck00fw48bnwq4" path="res://addons/Cliff_3_BaseColor_t_input.png" id="3_uyb72"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_chr6j"]
+render_priority = 0
+shader = ExtResource("1_6hbyp")
+shader_parameter/uv_scale = Vector2(10, 10)
+shader_parameter/color_space_vector1 = Vector3(1.421, 1.285, 1.011)
+shader_parameter/color_space_vector2 = Vector3(-0.215, 0.256, 0.106)
+shader_parameter/color_space_vector3 = Vector3(-0.035, -0.23, 0.779)
+shader_parameter/color_space_origin = Vector3(0.244, 0.12, -0.396)
+shader_parameter/t_input = ExtResource("3_uyb72")
+shader_parameter/inv_t = ExtResource("2_k53hj")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nber8"]
+material = SubResource("ShaderMaterial_chr6j")
+size = Vector2(50, 50)
+subdivide_width = 100
+subdivide_depth = 100
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_nber8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_nber8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998401, 0.0565359, 0, -0.0565359, 0.998401, -0.957347, 7.62533, 2.25883)
