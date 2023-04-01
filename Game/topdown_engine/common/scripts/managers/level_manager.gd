@@ -29,6 +29,6 @@ func InstantiatePlayableCharacters():
 	if player_scene_array.size() > 0 :
 		for player_scene in player_scene_array:
 			var player = player_scene.instantiate()
-			player.position = Vector3(0, 10, 0)
+			player.position = Vector3(0, 0, 0)
 			level_root.add_child.call_deferred(player)
 			player_array.append(player)
